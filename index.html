@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for u bibeh sayang ❤️</title>
+  <link rel="stylesheet" href="csss.css">
+  <!-- Menggunakan Font Google Poppins & Dancing Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="bg-image" aria-hidden="true"></div>
+
+  <!-- Background Animasi Hati -->
+  <div class="hearts-container">
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">🌸</div>
+    <div class="heart">❤️</div>
+    <div class="heart">✨</div>
+  </div>
+
+  <!-- Main Card Container -->
+  <main class="card-container">
+    <div class="profile-frame">
+      <!-- Ganti foto.jpg dengan file foto kalian -->
+      <img src="pinaa.jpg" alt="Foto Pasangan" class="profile-img" onclick="toggleImageZoom(this)">
+    </div>
+
+    <h1 class="title">Hayy hayyy, bibehh sayangg! 💕</h1>
+    
+    <p class="message">
+      Terima kasih ya sudah selalu ada dan bikin hari-hariku jadi lebih berwarna. 
+      Sederhana saja, aku cuma mau bilang kalau aku bersyukur banget bisa ketemu dan menjalani hari-hari sama kamu. 
+      <i>Stay with me always, okay?</i> ✨
+    </p>
+
+    <div class="quote-box">
+      <p>"Di antara jutaan kemungkinan di dunia ini, menemukanmu adalah hal terindah yang pernah terjadi dalam hidupku."</p>
+    </div>
+
+    <button class="btn-love" onclick="tampilkanPesan()">kalo bibeh sayang akuu, coba bibeh pencet💌</button>
+  </main>
+
+  <script>
+    function tampilkanPesan() {
+      alert("anjay di pencet nih yee, t tapi kan sayangku ke bibeh lebih banyak dari yang bibeh bayangkan ehekk laffyu mwaah 🥰❤️");
+    }
+    function toggleImageZoom(img) {
+      // toggle class on image
+      img.classList.toggle('enlarged');
+
+      // create overlay if enlarged
+      if (img.classList.contains('enlarged')) {
+        let overlay = document.createElement('div');
+        overlay.id = 'img-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.background = 'rgba(0,0,0,0.4)';
+        overlay.style.zIndex = 1000;
+        overlay.onclick = function(e) {
+          // if click outside the image, close
+          if (e.target === overlay) {
+            img.classList.remove('enlarged');
+            overlay.remove();
+          }
+        };
+        document.body.appendChild(overlay);
+
+        // move image to overlay to keep layout intact
+        overlay.appendChild(img);
+      } else {
+        // remove overlay and put image back to its container
+        const overlay = document.getElementById('img-overlay');
+        const frame = document.querySelector('.profile-frame');
+        if (overlay) {
+          frame.prepend(img);
+          overlay.remove();
+        }
+      }
+    }
+    // close overlay with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        const overlay = document.getElementById('img-overlay');
+        if (overlay) {
+          const img = overlay.querySelector('.profile-img.enlarged') || overlay.querySelector('.profile-img');
+          const frame = document.querySelector('.profile-frame');
+          if (img && frame) {
+            img.classList.remove('enlarged');
+            frame.prepend(img);
+          }
+          overlay.remove();
+        }
+      }
+    });
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for u bibeh sayang ❤️</title>
+  <link rel="stylesheet" href="csss.css">
+  <!-- Menggunakan Font Google Poppins & Dancing Script -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="bg-image" aria-hidden="true"></div>
+
+  <!-- Background Animasi Hati -->
+  <div class="hearts-container">
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+    <div class="heart">💕</div>
+    <div class="heart">🌸</div>
+    <div class="heart">❤️</div>
+    <div class="heart">✨</div>
+  </div>
+
+  <!-- Main Card Container -->
+  <main class="card-container">
+    <div class="profile-frame">
+      <!-- Ganti foto.jpg dengan file foto kalian -->
+      <img src="pinaa.jpg" alt="Foto Pasangan" class="profile-img" onclick="toggleImageZoom(this)">
+    </div>
+
+    <h1 class="title">Hayy hayyy, bibehh sayangg! 💕</h1>
+    
+    <p class="message">
+      Terima kasih ya sudah selalu ada dan bikin hari-hariku jadi lebih berwarna. 
+      Sederhana saja, aku cuma mau bilang kalau aku bersyukur banget bisa ketemu dan menjalani hari-hari sama kamu. 
+      <i>Stay with me always, okay?</i> ✨
+    </p>
+
+    <div class="quote-box">
+      <p>"Di antara jutaan kemungkinan di dunia ini, menemukanmu adalah hal terindah yang pernah terjadi dalam hidupku."</p>
+    </div>
+
+    <button class="btn-love" onclick="tampilkanPesan()">kalo bibeh sayang akuu, coba bibeh pencet💌</button>
+  </main>
+
+  <script>
+    function tampilkanPesan() {
+      alert("anjay di pencet nih yee, t tapi kan sayangku ke bibeh lebih banyak dari yang bibeh bayangkan ehekk laffyu mwaah 🥰❤️");
+    }
+    function toggleImageZoom(img) {
+      // toggle class on image
+      img.classList.toggle('enlarged');
+
+      // create overlay if enlarged
+      if (img.classList.contains('enlarged')) {
+        let overlay = document.createElement('div');
+        overlay.id = 'img-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.background = 'rgba(0,0,0,0.4)';
+        overlay.style.zIndex = 1000;
+        overlay.onclick = function(e) {
+          // if click outside the image, close
+          if (e.target === overlay) {
+            img.classList.remove('enlarged');
+            overlay.remove();
+          }
+        };
+        document.body.appendChild(overlay);
+
+        // move image to overlay to keep layout intact
+        overlay.appendChild(img);
+      } else {
+        // remove overlay and put image back to its container
+        const overlay = document.getElementById('img-overlay');
+        const frame = document.querySelector('.profile-frame');
+        if (overlay) {
+          frame.prepend(img);
+          overlay.remove();
+        }
+      }
+    }
+    // close overlay with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' || e.key === 'Esc') {
+        const overlay = document.getElementById('img-overlay');
+        if (overlay) {
+          const img = overlay.querySelector('.profile-img.enlarged') || overlay.querySelector('.profile-img');
+          const frame = document.querySelector('.profile-frame');
+          if (img && frame) {
+            img.classList.remove('enlarged');
+            frame.prepend(img);
+          }
+          overlay.remove();
+        }
+      }
+    });
+  </script>
+</body>
+</html>
